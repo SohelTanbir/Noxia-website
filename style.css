@@ -1,0 +1,881 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+/*
+===============================================================
+*********************** Default Css ***************************
+===============================================================
+*/
+h1,h2,h3,h4,h5,h6{
+    padding: 0;
+    margin:0;
+}
+body{
+    font-family: 'Mulish', sans-serif;
+    font-size: 1.6rem;
+    color: #2b2b2b;
+    background: #fff;
+}
+html{
+    font-size:62.5%;
+}
+/*
+===============================================================
+********************* Reusable Code ***************************
+===============================================================
+*/
+a{
+    text-decoration: none;
+    font-size: 1.6rem;
+}
+i{
+    font-size: 1.6rem;
+}
+ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.text-left{
+    text-align: left;
+}
+.text-center{
+    text-align:center;
+}
+.text-right{
+    text-align:right;
+}
+.float-left{
+    float: left;
+}
+.float-right{
+    float:right;
+}
+.clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.row{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-wrap: wrap;
+    clear: both;
+}
+.container{
+    max-width: 1350px;
+    width: 90%;
+    margin: 0 auto;
+}
+img{
+    max-width: 100%;
+}
+.btn{
+    padding:1.8rem 4.5rem;
+    background: #ee3364;
+    color: #fff;
+    border-radius:.3rem;
+    text-transform: uppercase;
+}
+.section_padding{
+    padding: 100px 0;
+}
+/*
+===============================================================
+****************** Header Section Css *************************
+===============================================================
+*/
+#header_section{
+    width: 100%;
+}
+.header_top{
+    background:linear-gradient(#180e65,#271563,#431b62,#311b64);
+    padding: 15px 0;
+    border-bottom: 1px solid #583372;
+}
+.header_top ul li{
+    float: left;
+    transition: .5s;
+}
+.header_top ul li a:hover {
+    color: #d0ced6;
+}
+.header_contant{
+    flex-basis: 60%;
+}
+.header_contant ul li:nth-child(2){
+    padding-left:8.5rem;
+}
+.header_contant ul li a{
+    font-family:Mulish;
+    color: #908BA9;
+    font-weight: 400;
+}
+.header_social {
+    display: flex;
+    flex-basis: 40%;
+    justify-content: flex-end;
+}
+.header_social ul li{
+    display: inline-block;
+    padding-left:2rem;
+}
+.header_social ul li a{
+    display:block;
+    color: #9791AB;
+}
+.navbar{
+    background:linear-gradient(#2F176F,#511E6D) ;
+    padding: 3rem 0;
+}
+.logo{
+    flex-basis: 20%;
+}
+.navbar nav{
+    flex-basis: 70%;
+}
+.add_cart{
+    flex-basis: 10%;
+}
+.navbar nav ul{
+    text-align: center;
+}
+.navbar nav ul li{
+    display: inline-block;
+    padding-left: 4rem;
+}
+.navbar nav ul li a{
+    display: block;
+    font-size: 1.8rem;
+    color: #fff;
+    font-weight: 400;
+    text-transform: capitalize;
+    transition: .3s;
+}
+.navbar nav ul li a:hover{
+    color: #ee3364;
+}
+.add_cart{
+    display: flex;
+    justify-content: flex-end;
+}
+.add_cart span i{
+    color: #9791AB;
+    font-size:2rem;
+    cursor: pointer;
+}
+.add_cart span .fa-shopping-bag{
+    position: relative;
+}
+.add_cart span .fa-shopping-bag::after {
+	content: attr(data-count);
+	width: 15px;
+	height: 15px;
+	line-height: 15px;
+	border-radius: 50%;
+	text-align: center;
+	background: #ee3364;
+	color: #fff;
+	display: block;
+	font-size: 1rem;
+	position: absolute;
+	top: 5%;
+	left: 53%;
+}
+.add_cart span:nth-child(2){
+    padding-left:2rem;
+}
+/*
+===============================================================
+****************** Header Section Css *************************
+===============================================================
+*/
+#slider_section{
+    width:100%;
+    background: url('assets/images/slider/slider-bg.jpg')no-repeat center center;
+    background-size: cover;
+    padding: 8rem 0;
+}
+.slider_text{
+    flex-basis:60%;
+}
+.slider_img{
+    flex-basis:40%;
+}
+.slider_text h1{
+    font-size: 8rem;
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+.slider_text p{
+    font-size: 2rem;
+    color: #fff;
+    font-weight: 400;
+    margin-bottom:6rem;
+}
+/*
+===============================================================
+****************** Service Section Css ************************
+===============================================================
+*/
+#service_section{
+    width: 100%;
+}
+.serive_heading h4 {
+    width: 55%;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #2e2e2e;
+    margin: 0 auto 40px;
+}
+.serive_heading h4  span{
+    font-weight:400;
+}
+.single_service {
+    flex-basis: 32%;
+    background: #EDF7FF;
+    padding: 45px 30px;
+    border: .3rem solid transparent;
+    transition: .5s;
+    cursor: pointer;
+}
+.single_service:nth-child(2) {
+	margin: 0 auto;
+}
+.single_service:hover{
+    border: .3rem solid #ee3364;
+    transform: scale(1.01);
+    box-shadow: 0 0 30px rgba(0,0,0,0.1),0 0 30px rgba(0,0,0,0.1);
+}
+.single_service .service_text h3{
+    font-size: 2.5rem;
+    color: #2e2e2e;
+    font-weight: 700;
+    margin:20px 0;
+}
+.single_service .service_text p{
+    font-size: 1.5rem;
+    color: #838383;
+    line-height:2.5rem;
+}
+.service_btn{
+    width: 25%;
+    margin: auto;
+}
+.service_btn a{
+    display: inline-block;
+    margin: 8.5rem auto 0;
+}
+
+/*
+===============================================================
+******************** Skill Section Css ************************
+===============================================================
+*/
+#skill_section{
+    width: 100%;
+    background: #edf7ff;
+}
+.skill_left_part{
+    flex-basis: 49%;
+    margin-right: 2%;
+    padding: 2rem;
+}
+.skill_left_part h3,.skill_right h3{
+    width: 80%;
+    font-size:3.6rem;
+    font-weight: 700;
+    color:#000000;
+    margin-bottom: 4rem;
+}
+.skill_left_part p{
+    font-size:1.6rem;
+    font-weight:400;
+    color:#484848;
+    margin-bottom: 3rem;
+    line-height: 2.8rem;
+}
+.skill_title{
+    position: relative;
+}
+.skill_title h4{
+    font-size:2rem;
+    font-weight:900;
+    color: #2c2b2a;
+    padding:0 0 1.5rem;
+}
+.skill_title_img{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.skill_right{
+    flex-basis: 49%;
+    padding: 2rem;
+}
+.skill_right h3{
+    width:90%;
+}
+.skill_counter h5{
+    font-size: 1.8rem;
+    color: #373737;
+    margin-bottom: 1.5rem;
+}
+.skill_counter .count{
+    position: relative;
+    width: 100%;
+    height: 1rem;
+    background:#ffffff;
+    margin-bottom: 3rem;
+}
+.skill_counter .counter_percent{
+    height: 100%;
+    top: 0;
+    left: 0;
+    background:#ee3364;
+    display: block;
+}
+.skill_counter .counter_percent.frontend{
+    width: 76%;
+}
+.skill_counter .counter_percent.backend{
+    width:69%;
+}
+.skill_counter .counter_percent.wordpress{
+    width:90%;
+}
+.counter_percent span{
+    position: absolute;
+    right: 0;
+    top: -300%;
+    font-size: 1.8rem;
+    color: #373737;
+}
+/*
+===============================================================
+******************** Video Section Css ************************
+===============================================================
+*/
+#video_section{
+    width: 100%;
+    background: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),
+    url('assets/images/video/video-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.video_content p{
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #fff;
+    margin-bottom:2.5rem;
+}
+.video_content h2 {
+	font-size: 4.5rem;
+	font-weight: 700;
+	color: #fff;
+	width: 80%;
+    margin: 0 auto;
+    padding-bottom: 8rem;
+}
+.video_content .logo img{
+    width:10rem;
+    height:10rem;
+    margin-bottom:5.5rem;
+    color: #fff;
+}
+/*
+===============================================================
+****************** Testimonial Section Css ********************
+===============================================================
+*/
+#testimonial_section{
+    widows: 100%;
+    background: #1b1b1b;
+}
+.single_testimonial {
+    display: flex;
+    flex-basis: 33%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.single_img{
+    padding-right: 3rem;
+}
+.single_text{
+    color: #fff;
+}
+.single_text h2{
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+.single_text p{
+    font-size:1.8rem;
+    font-weight:700;
+}
+
+#solution_section{
+    width: 100%;
+}
+.solution_img,.solution_text{
+    flex-basis:49%;
+}
+.inner_img {
+    position: relative;
+}
+.outer_img {
+	position: absolute;
+	left: 12%;
+	top: 10%;
+}
+.solution_text h3 {
+	font-size: 4.5rem;
+	font-weight: 700;
+	color: #1c1c1c;
+	margin-bottom: 3rem;
+}
+.solution_text p {
+	font-size: 1.8rem;
+	font-weight: 400;
+	color: #8b8b8b;
+	line-height: 2.8rem;
+	margin-bottom:3rem;
+}
+.solution_list ul li span {
+	width: .8rem;
+	border: .2rem solid #ee3364;
+	border-radius: 50%;
+	padding:0 .3rem;
+    color: #ee3364;
+    margin-right: 1rem;
+}
+.solution_list {
+	margin-bottom: 10rem;
+}
+.solution_list ul li span i{
+    font-size: 1.4rem;
+}
+.solution_list ul li{
+    margin-bottom: 3rem;
+}
+.solution_list ul li a{
+    font-size: 1.7rem;
+}
+.solution_text a.btn{
+    margin-top: 5rem;
+}
+/*
+===============================================================
+****************** Hightlight  Section Css ********************
+===============================================================
+*/
+#highlights{
+    width: 100%;
+    background: url('assets/images/highlights/highlight-bg.jpg')no-repeat center center;
+    background-size: cover;
+   
+}
+.highlight_btn {
+	padding-top: 14rem;
+	text-align: center;
+}
+.highlight_heading h5{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ee3364;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+}
+.highlight_heading h2{
+    font-size: 6.5rem;
+    font-weight: 700;
+    color: #222222;
+    margin-bottom: 6.5rem;
+}
+.highlight_single {
+	flex-basis: 50%;
+	position: relative;
+}
+.highlight_single img {
+	display: block;
+	overflow: hidden;
+	width: 100%;
+	height:70.3rem;
+}
+.highlight_overlay {
+	position: absolute;
+	background:rgba(0,0,0,0.8);
+	left: 0;
+	top: 0;
+	width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+    top: -100%;
+}
+.highlight_single:hover .highlight_overlay {
+    visibility:visible;
+    opacity:1;
+    transition: .8s;
+    top:0%;
+}
+.overla_text h4 {
+	font-size: 4.8rem;
+	font-weight: 700;
+	color: #ffffff;
+	padding:0 12rem 3rem;
+}
+.overla_text h6{
+	font-size:1.4rem;
+	font-weight:400;
+	color: #ee3364;
+	padding:0 0rem 3rem;
+}
+.overla_text p {
+	font-size: 2rem;
+	font-weight: 400;
+	color: #ffffff;
+	padding: 0 13rem 3rem;
+	line-height: 2.8rem;
+}
+.overla_text span{
+    font-size: 1.5rem;
+    color: #838383;
+    cursor: pointer;
+}
+/*
+===============================================================
+****************** Price Table  Section Css *******************
+===============================================================
+*/
+#price_section{
+    width: 100%;
+}
+.single_price{
+    flex-basis: 32%;
+    border: .3rem solid #eeeeee;
+    padding: 7.5rem 4.5rem;
+    text-align: center;
+    transition: .2s;
+}
+.single_price:nth-child(2) {
+	margin: 0 auto;
+}
+.single_price h4{
+    font-size: 3rem;
+    font-weight: 700;
+    color: #0b0b0b;
+    margin-bottom: 1.3rem;
+}
+.single_price h6{
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: #0b0b0b;
+    text-transform: uppercase;
+    margin-bottom:5rem;
+}
+.single_price h2{
+    font-size:3.6rem;
+    margin-bottom:5rem;
+}
+.single_price h2 sub {
+	font-size: 7rem;
+	font-weight: 700;
+	color: #0b0b0b!important;
+	margin-left: -1rem;
+}
+.single_price p{
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #5c5c5c;
+    margin-bottom:6rem;
+}
+.price_btn a.btn{
+    background: #1e1e1e;
+    font-weight: 700;
+}
+.single_price:hover{
+    background: #2e2e2e;
+    color: #fff;
+}
+.single_price:hover.single_price h4{
+    color: #fff;
+}
+.single_price:hover.single_price sub{
+    color: #fff!important;
+}
+.single_price:hover.single_price p{
+    color: #fff!important;
+}
+.single_price:hover.single_price h6{
+    color: #fff!important;
+}
+/*
+===============================================================
+********************** Team Section Css ***********************
+===============================================================
+*/
+.team_section{
+    width: 100%;
+}
+.team_section .row{
+    padding: 0;
+}
+.single_team{
+    flex-basis:20%;
+    position: relative;;
+}
+.single_team img{
+    width: 100%;
+    height:40rem;
+}
+.team_overlay{
+    position: absolute;
+    background: rgba(0,0,0,0.8);
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+}
+.single_team:hover .team_overlay{
+    visibility:visible;
+    opacity:1;
+    left:0%;
+    transition: .3s;
+}
+.team_info{
+    position: absolute;
+    top:50%;
+    left:45%;
+    transform: translateX(-50%);
+}
+.team_info h3{
+    font-size:2.2rem;
+    font-weight: 400;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+.team_info p{
+    font-size:1.6rem;
+    font-weight: 400;
+    color: #ee3364;
+}
+/*
+===============================================================
+******************** Contact Section Css **********************
+===============================================================
+*/
+#contant_section{
+    width: 100%;
+    background: #f2f2f2;
+    position: relative;
+    overflow-x: hidden;
+}
+.contact_img{
+    flex-basis: 40%;
+}
+.contact_box{
+    flex-basis: 60%;
+    padding:0 2rem;
+}
+.contact_box h3{
+   font-size:3.5rem;
+   font-weight: 700;
+   color: #2b2b2b;
+   margin-bottom: 3rem;
+}
+.contact_box h3 span{
+   color: #ee3364;
+}
+.contact_box p{
+   font-size: 1.7rem;
+   font-weight:400;
+   color: #2e2e2e;
+   margin-bottom: 3rem;
+   line-height: 2.8rem;
+}
+.contact_box select,input{
+    border: none;
+    outline: none;
+    width: 32rem;
+}
+.contact_box select, input[type="number"] {
+	background: #cacaca;
+	padding: 1.5rem 2rem;
+	margin-bottom: 2rem;
+    margin-right: 2%;
+    font-family: 'Mulish', sans-serif;
+    color: #222222;
+    font-size: 1.6rem;
+}
+.contact_box input[placeholder="Name"]{
+    padding: 1.3rem 2.8rem;
+    border: .2rem solid #ee3f6d;
+}
+.contact_box input[type="submit"]:hover{
+    cursor: pointer;
+    background: green;
+}
+::placeholder{
+    font-size: 1.6rem;
+    font-family: sans-serif;
+}
+.contact_shape1{
+    position: absolute;
+    left: 0;
+}
+.contact_shape2 {
+	position: absolute;
+	right: -16%;
+	top: 55%;
+}
+/*
+===============================================================
+******************** Contact Section Css **********************
+===============================================================
+*/
+#clients_review{
+    width: 100%;
+}
+.client_container{
+    width: 60%;
+    margin:0 auto;
+}
+.client_img{
+    position: relative;
+}
+.client_img img {
+	width: 10.6rem !important;
+	height: 10.6rem !important;
+	border-radius: 50%;
+	line-height: 10.6rem;
+	text-align: center !important;
+	margin: 0 auto 2rem;
+}
+.client_img::before {
+    content: "\f10d";
+    font-family:"Font Awesome 5 Free";
+    font-weight:900;
+	position: absolute;
+	width: 10rem;
+	height: 10rem;
+	left: 22%;
+    top: 22%;
+    color: #838383;
+    font-size:5rem;
+}
+.client_img::after {
+    content: "\f10e";
+    font-family:"Font Awesome 5 Free";
+    font-weight:900;
+	position: absolute;
+	width: 10rem;
+	height: 10rem;
+	right: 22%;
+    top: 22%;
+    color: #838383;
+    font-size:5rem;
+}
+.single_client h3{
+    font-size: 2.6rem;
+    font-weight: 700;
+    color: #303030;
+    margin-bottom:.5rem;
+}
+.single_client h6{
+    font-size:1.4rem;
+    font-weight:400;
+    color: #c4c4c4;
+    margin-bottom:2.5rem;
+}
+.single_client p{
+    font-size:1.6rem;
+    font-weight:400;
+    color: #8d8d8d;
+    margin-bottom:2.5rem;
+    line-height: 2.5rem;
+}
+#brand_section{
+    width: 100%;
+    padding-bottom:8rem;
+}
+.single_brand{
+    flex-basis: 20%;
+    padding: 0 5rem;
+}
+/*
+===============================================================
+******************** Footer Section Css ***********************
+===============================================================
+*/
+#footer_section{
+    width: 100%;
+    background:#282828;
+    padding: 8rem 0 4rem;
+}
+.footer_top_content img{
+    max-width: 30rem;
+    margin-bottom:3.5rem;
+}
+.footer_top_content p {
+	font-size: 1.4rem;
+	font-weight: 400;
+	color: #a5a5a5;
+	width: 43%;
+	line-height: 2.8rem;
+	margin: 0 auto 3rem;
+}
+.footer_social ul li{
+    display:inline-block;
+    padding-left:1rem;
+}
+.footer_social ul li a{
+   font-size: 2rem;
+   color: #ee3f6d;
+   transition: .3s;
+}
+.footer_social ul li a:hover{
+   color: #fff;
+}
+.footer_bottom{
+    width: 100%;
+    background: #171717;
+    padding:3rem 0;
+}
+.footer_bottom p{
+  color:#a0a8b7;
+}
+.footer_bottom p span{
+    color:#fff;
+    text-transform: uppercase;
+}
+
+
+
+/* For Mobile Menu*/
+.mobile_menu {
+	width: 10%;
+	position: absolute;
+    left: 78%;
+    display:none;
+}
+.mobile_menu i{
+    font-size:2.2rem;
+    color: #fff;
+    cursor: pointer;
+}
